@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ImagePlaceholder } from '../components/imagePlaceholder';
+import { ImagePlaceholder } from '../components/ImagePlaceholder';
 import { Search, ShoppingCart, Tag } from 'lucide-react';
 import { DiveDeeper } from '../components/DiveDeeper';
 

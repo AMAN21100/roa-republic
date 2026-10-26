@@ -1,5 +1,5 @@
 import React from 'react';
-import { ImagePlaceholder } from '../components/imagePlaceholder';
+import { ImagePlaceholder } from '../components/ImagePlaceholder';
 import { DiveDeeper } from '../components/DiveDeeper';
 import { Clock, ArrowRight } from 'lucide-react';
 

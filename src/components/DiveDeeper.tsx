@@ -1,5 +1,5 @@
 import React from 'react';
-import { ImagePlaceholder } from './imagePlaceholder';
+import { ImagePlaceholder } from './ImagePlaceholder';
 import { ArrowRight } from 'lucide-react';
 
 interface DiveDeeperProps {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Send, CheckCircle2, Loader2 } from 'lucide-react';
-import { ImagePlaceholder } from '../components/imagePlaceholder';
+import { ImagePlaceholder } from '../components/ImagePlaceholder';
 import { DiveDeeper } from '../components/DiveDeeper';
 
 interface FeedbackProps {
