@@ -29,39 +29,27 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, setCurrentTab }) => 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 md:h-24">
           
-          {/* Brand Area */}
+          {/* Left Brand Area: Wing Logo + Red ROA Badge */}
           <div 
             onClick={() => handleNavClick('home')}
-            className="flex items-center gap-3 sm:gap-4 cursor-pointer group"
+            className="flex items-center gap-3 sm:gap-4 cursor-pointer group shrink-0"
           >
-            {/* Left Logo (header1.png) */}
             <img 
               src="/images/header1.png" 
               alt="ROA Logo" 
               onError={(e) => {
                 e.currentTarget.style.display = 'none';
               }}
-              className="h-10 sm:h-12 md:h-16 w-auto object-contain transition-transform duration-200 group-hover:scale-105" 
+              className="h-10 sm:h-12 md:h-14 w-auto object-contain transition-transform duration-200 group-hover:scale-105" 
             />
 
-            {/* Red ROA Box - Hidden on mobile screens, shown on sm: (640px) and up */}
-            <div className="hidden sm:flex h-10 w-10 md:h-12 md:w-12 bg-black border-2 border-red-600 items-center justify-center font-black text-white text-sm md:text-base tracking-widest group-hover:bg-red-600 transition-colors">
+            <div className="h-10 w-10 sm:h-11 sm:w-11 md:h-12 md:w-12 bg-black border-2 border-red-600 flex items-center justify-center font-black text-white text-sm sm:text-base md:text-lg tracking-widest group-hover:bg-red-600 transition-colors">
               ROA
-            </div>
-
-            {/* Typography */}
-            <div>
-              <span className="text-lg sm:text-xl md:text-2xl font-black tracking-widest text-white uppercase block leading-none">
-                ROA
-              </span>
-              <span className="text-[10px] sm:text-xs tracking-wider text-red-600 uppercase font-bold whitespace-nowrap">
-                Rise of the Republic
-              </span>
             </div>
           </div>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center space-x-2 xl:space-x-4">
+          <nav className="hidden lg:flex items-center space-x-1 xl:space-x-4">
             {navItems.map((item) => {
               const Icon = item.icon;
               const isActive = currentTab === item.id;
@@ -82,10 +70,10 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, setCurrentTab }) => 
             })}
           </nav>
 
-          {/* Right Logo (header2.png) - Hidden on mobile, shown on md: (768px) and up */}
+          {/* Right Logo / Emblem (header2.png) */}
           <div 
             onClick={() => handleNavClick('home')}
-            className="hidden md:flex items-center cursor-pointer group pl-2"
+            className="hidden md:flex items-center cursor-pointer group pl-2 shrink-0"
           >
             <img 
               src="/images/header2.png" 
@@ -93,11 +81,11 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, setCurrentTab }) => 
               onError={(e) => {
                 e.currentTarget.style.display = 'none';
               }}
-              className="h-10 md:h-14 w-auto object-contain transition-transform duration-200 group-hover:scale-105" 
+              className="h-10 md:h-12 w-auto object-contain transition-transform duration-200 group-hover:scale-105" 
             />
           </div>
 
-          {/* Mobile Hamburger Button */}
+          {/* Mobile Menu Toggle Button */}
           <div className="lg:hidden flex items-center">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
